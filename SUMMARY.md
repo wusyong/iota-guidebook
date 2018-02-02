@@ -2,8 +2,15 @@
 
 * [序](README.md)
 * [什麼是 IOTA？](IOTA.md)
-* [其他待整](Uncategorized.md)
-* [線上資源](Resources.md)
 * [完整節點](full-node.md)
   * [Google Cloud Platform](full-node/google-cloud-platform.md)
+* [種子安全](zhong-zi-an-quan.md)
+  * [作業系統終端機產生](zhong-zi-an-quan/zhong-duan-ji.md)
+  * [KeePass 產生並保存](zhong-zi-an-quan/keepass-chan-sheng-bing-bao-cun.md)
+  * [Web App 產生](zhong-zi-an-quan/web-app-chan-sheng.md)
+  * [快照](zhong-zi-an-quan/kuai-zhao.md)
+* [雙重支付](shuang-zhong-zhi-fu.md)
+* [交易所](jiao-yi-suo.md)
+* [其他待整](Uncategorized.md)
+* [線上資源](Resources.md)
 
