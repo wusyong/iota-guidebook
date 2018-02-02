@@ -2,7 +2,6 @@
 
 [IOTA 教程](https://hackmd.io/s/Sy9ChM1If)
 
-[在 Google Cloud Platform 上建立 IRI Full Node](https://hackmd.io/s/BkbaBvpHG)
 
 [在沒有Coordinator的狀況下，Tangle如何抵擋雙重支付攻擊(Double-Spend)？](https://hackmd.io/s/SyMBZd3NG)
 
