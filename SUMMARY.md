@@ -8,7 +8,7 @@
   * [作業系統終端機產生](zhong-zi-an-quan/zhong-duan-ji.md)
   * [KeePass 產生並保存](zhong-zi-an-quan/keepass-chan-sheng-bing-bao-cun.md)
   * [Web App 產生](zhong-zi-an-quan/web-app-chan-sheng.md)
-  * [快照](zhong-zi-an-quan/kuai-zhao.md)
+* [快照](zhong-zi-an-quan/kuai-zhao.md)
 * [雙重支付](shuang-zhong-zhi-fu.md)
 * [三進位](Ternery.md)
 * [交易所](jiao-yi-suo.md)
