@@ -10,6 +10,7 @@
   * [Web App 產生](zhong-zi-an-quan/web-app-chan-sheng.md)
 * [快照](zhong-zi-an-quan/kuai-zhao.md)
 * [雙重支付](shuang-zhong-zhi-fu.md)
+* [交易、確認與共識](consensus.md)
 * [三進位](Ternery.md)
 * [交易所](jiao-yi-suo.md)
 * [其他待整](Uncategorized.md)
