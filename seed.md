@@ -7,6 +7,7 @@
 * IOTA 種子擁有的錢包能夠產生數個相對應的地址
 * 其產生每個相對應的地址屬於該種子的
 * 像以下就是一個種子：GO9KADVTOTXGND9OFUWAUSPEWNTUNAPILFDUSICVFHWXXQKCFXSWQEJRBCCFAQPHORQYSVNNCMNNVWHTY
+* 種子中的字符其實是用三進制表示，有關[三進位系統](ternery.md)的解說會在下文提及
 
 ## 種子產生注意事項
 * _**不要**_ 自己用鍵盤來輸入 81 個字符（A-Z9）來產生種子
