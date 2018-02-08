@@ -7,4 +7,4 @@
 * [交易所](exchange.md)
 * [快照](snapshot.md)
 
-0.0.3
+0.0.4
