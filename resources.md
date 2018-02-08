@@ -1,35 +1,39 @@
-[IPFS](https://hackmd.io/s/ry6k-PkHb)
+# 線上資源彙整
 
-[Tangle Note](https://hackmd.io/s/S1ZEI0lBb)
+有鑑於仍然有非常多的線上資源能夠參考，而有些算是與 IOTA 有直接或間接關聯的訊息。以下沒有依照重要性，純粹列舉筆者自己認為值得一看的資訊。如有真的非常推薦的文章，筆者會在往下進行翻譯方便更多人閱讀。
 
-[IOTA feature](https://briandcolwell.com/2017/07/iota-the-backbone-of-iot-is-here)
+* [IPFS](https://hackmd.io/s/ry6k-PkHb)
 
-[閃電網路懷疑論](https://www.ptt.cc/bbs/DigiCurrency/M.1451386728.A.069.html)
+* [Tangle Note](https://hackmd.io/s/S1ZEI0lBb)
 
-[Permanode](https://hackmd.io/s/BJ1eY3joW)
+* [IOTA feature](https://briandcolwell.com/2017/07/iota-the-backbone-of-iot-is-here)
 
-[MAM notes](https://hackmd.io/s/HJGHYIH6-#)
+* [閃電網路懷疑論](https://www.ptt.cc/bbs/DigiCurrency/M.1451386728.A.069.html)
 
-[MAM notes 2](https://hackmd.io/s/rJkpIrrbM)
+* [Permanode](https://hackmd.io/s/BJ1eY3joW)
 
-[consesus](http://www.iotachina.com/wp-content/uploads/2017/10/2017102313481740.pdf)
+* [MAM notes](https://hackmd.io/s/HJGHYIH6-#)
 
-[iota sandbox](https://hackmd.io/s/ByWQUqfh-)
+* [MAM notes 2](https://hackmd.io/s/rJkpIrrbM)
 
-[CCURL](https://hackmd.io/s/SJ3xPQSZG)
+* [iota sandbox](https://hackmd.io/s/ByWQUqfh-)
 
-[Nelson note](https://hackmd.io/s/S1GLkvLzf)
+* [CCURL](https://hackmd.io/s/SJ3xPQSZG)
 
-[Haarlem documents](https://hackmd.io/s/Sy5u7WuMM)
+* [Nelson note](https://hackmd.io/s/S1GLkvLzf)
 
-[Summary of Equilibria in the Tangle: let me try to explain…](https://hackmd.io/s/rkltQhPzf)
+* [Haarlem documents](https://hackmd.io/s/Sy5u7WuMM)
 
-[Summary of Equilibria 2](https://hackmd.io/s/H18UgIx7f)
+* [Summary of Equilibria in the Tangle: let me try to explain…](https://hackmd.io/s/rkltQhPzf)
 
-[Nick Johnson Doubt Summmary](https://hackmd.io/s/r1Cy3DAMf)
+* [Summary of Equilibria 2](https://hackmd.io/s/H18UgIx7f)
 
-[Swarm Node](https://hackmd.io/s/SJcu6eLmz)
+* [A Zero-Math Introduction to Markov Chain Monte Carlo Methods](https://towardsdatascience.com/a-zero-math-introduction-to-markov-chain-monte-carlo-methods-dcba889e0c50)
 
-[IOTA 愛好者社群見面會直播](https://www.facebook.com/groups/897485720426082/permalink/912116988962955/)
+* [Nick Johnson Doubt Summmary](https://hackmd.io/s/r1Cy3DAMf)
 
-[台灣 IOTA usecase](https://hackmd.io/s/SksAclcQG)
+* [Swarm Node](https://hackmd.io/s/SJcu6eLmz)
+
+* [IOTA 愛好者社群見面會直播](https://www.facebook.com/groups/897485720426082/permalink/912116988962955/)
+
+* [台灣 IOTA usecase](https://hackmd.io/s/SksAclcQG)

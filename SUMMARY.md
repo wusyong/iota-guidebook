@@ -14,4 +14,6 @@
 * [交易、確認與共識](consensus.md)
 * [交易所](exchange.md)
 * [其他待整](uncategorized.md)
-* [線上資源](resources.md)
+* [線上資源彙整](resources.md)
+  * [Tangle 圖解介紹](resources/tangle-illustrated.md)
+  * [Tangle 圖解介紹 p2](resources/tangle-illustrated-p2.md)
