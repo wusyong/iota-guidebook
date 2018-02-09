@@ -38,4 +38,4 @@ hash(transaction_data+counter)=...fj28068gfdb0000 （PoW 完成）
 * 增加 MWM 不會有甚麼問題，不過要注意會增長 PoW 的時間
 * MWM 的變更可在以下路徑找到： iri/src/main/java/com/iota/iri/conf/Configuration.java
 
-{%gist wusyong/6f4bc35187d94076be817b728900fc8f%}
+<script src="https://gist.github.com/wusyong/6f4bc35187d94076be817b728900fc8f.js"></script>
