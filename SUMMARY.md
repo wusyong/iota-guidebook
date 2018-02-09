@@ -7,6 +7,7 @@
   * [使用 Web App 產生](seed/web-app.md)
   * [使用 KeePass 產生並保存](seed/keepass.md)
 * [三進位](ternery.md)
+* [權重](weight.md)
 * [完整節點](full-node.md)
   * [Google Cloud Platform](full-node/google-cloud-platform.md)
 * [快照](snapshot.md)
