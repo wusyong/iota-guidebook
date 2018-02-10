@@ -36,6 +36,4 @@ hash(transaction_data+counter)=...fj28068gfdb0000 （PoW 完成）
 * 根據 IRI release v1.4.2.1，mainnet 的 MWM 為 14
 * 根據 IRI release testnet-v1.4.1.3，testnet 的 MWM 為 9
 * 增加 MWM 不會有甚麼問題，不過要注意會增長 PoW 的時間
-* MWM 的變更可在以下路徑找到： iri/src/main/java/com/iota/iri/conf/Configuration.java
-
-<script src="https://gist.github.com/wusyong/6f4bc35187d94076be817b728900fc8f.js"></script>
+* MWM 的變更可在以下路徑找到： [iri/src/main/java/com/iota/iri/conf/Configuration.java](https://github.com/iotaledger/iri/blob/dev/src/main/java/com/iota/iri/conf/Configuration.java)

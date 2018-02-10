@@ -11,6 +11,7 @@
 * [完整節點](full-node.md)
   * [Google Cloud Platform](full-node/google-cloud-platform.md)
 * [快照](snapshot.md)
+* [快照準備事項](snapshot-pre.md)
 * [雙重支付](double-spend.md)
 * [交易、確認與共識](consensus.md)
 * [交易所](exchange.md)
