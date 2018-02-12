@@ -21,3 +21,4 @@
   * [Tangle 圖解介紹](resources/tangle-illustrated.md)
   * [Tangle 圖解介紹 p2](resources/tangle-illustrated-p2.md)
   * [交易、確認與共識](consensus.md)
+ 
