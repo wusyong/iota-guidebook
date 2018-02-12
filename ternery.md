@@ -7,10 +7,14 @@
 * 通常講三進位提到的會是非平衡三進位，不過以下將會專注在平衡三進位系統
 * Trit 指的是 Trinary Digit，相較於二進位就是 bit
 其可以擁有的數值為 -1（T）、0、1
-![](https://i.imgur.com/xitEwpF.png =90x100)
+
+![](images/trit.png)
+
 * Tryte 指的是 Trinary Byte, ，相較於二進位就是byte
 在 IOTA 中一個 tryte 包含 3 個 trits
-![](https://i.imgur.com/Q5SnX6J.png =200x100)
+
+![](images/tryte.png)
+
 * 1 byte = $2^8$ = 256 種組合
 * 1 tryte = 3 trits = $3^3$ = 27 種組合
 * 5 trits = $3^5$ = 27 種組合

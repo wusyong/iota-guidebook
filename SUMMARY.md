@@ -15,10 +15,9 @@
   * [Google Cloud Platform](full-node/google-cloud-platform.md)
 * [權重](weight.md)
 * [雙重支付](double-spend.md)
-* [交易所](exchange.md)
+* [交易所轉帳](exchange.md)
 * [其他待整](uncategorized.md)
 * [線上資源彙整](resources.md)
   * [Tangle 圖解介紹](resources/tangle-illustrated.md)
   * [Tangle 圖解介紹 p2](resources/tangle-illustrated-p2.md)
   * [交易、確認與共識](consensus.md)
- 
