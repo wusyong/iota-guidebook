@@ -19,6 +19,7 @@ GCP 會提供 $300 美元的金額以及一年的時間給新的帳號試用，�
 ### 2. 建立新的專案
 
 按下「+」然後這邊我們將專案命名為「IOTA」  
+
 ![](https://i.imgur.com/lkJZbwN.png)
 
 ### 3. 建立執行個體（Instance）
@@ -42,11 +43,14 @@ GCP 會提供 $300 美元的金額以及一年的時間給新的帳號試用，�
   3.目標選「網路中的所有執行個體」
   4.來源 IP 範圍輸入 `0.0.0.0/0`
   5.指定的通訊協定和通訊埠輸入 `tcp:14265; udp:14265`
+  
   ![](https://i.imgur.com/lI31sRL.png)
+  
 * 建立另一個新的取作「iota-14265-out」，不過流量方向選「輸出」。
 * 重複上面兩個步驟於 port 16600。
 * 至於 udp 14600 和 tcp 15600 一樣是重複上面的步驟，但是在指定的通訊協定和通訊埠輸入只須分別輸入 `udp:14600;` 和 `tcp:15600`。
 * 確認以上 port 都有建立「輸入」與「輸出」的規則，都設定好後用搜尋列回到「執行個體」，按下 `SSH` 就能建立 SSH 連線，往下我們就可以開始安裝 IRI。
+
   ![](https://i.imgur.com/n70XMrl.png)
 
 ## 安裝 IRI
@@ -392,6 +396,3 @@ sudo npm install -g nelson.cli@0.3.22
 ### 錢包
 
 架設完整節點的另一項好處是你可以自己拿來使用，就不必再和其他人一樣擠外面的公開節點了，你可以在錢包工具上設定節點為你所自己架設的。注意 milestone 是否有同步再繼續使用。如果發現餘額為 0 的話，處理步驟和 snapshot 一樣持續產生地址即可。
-
-`ETH Donation: 0xdda02772C1C5b48B72aDe8Be67d203CF4AEa8f7F`  
-`IOTA Donation: ZDB9IS9WFPQQVLLQPREF9BSGNZUCWN9IDGOBXTGJEFIYEIJZYNHREMPAVYIDNNZUYHRBHICSXSVWZVSECTGBPNPRKB`
