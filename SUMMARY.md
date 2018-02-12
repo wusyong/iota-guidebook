@@ -1,6 +1,6 @@
 # Summary
 
-* [序](README.md)
+* [IOTA 學習筆記](README.md)
 * [什麼是 IOTA？](iota.md)
 * [種子安全](seed.md)
   * [使用作業系統終端機產生](seed/terminal.md)
