@@ -1,7 +1,7 @@
 # 使用終端機產生種子
 
 ## 使用終端機產生種子
-* 根據官方 IOTA 知識庫：https://kb.helloiota.com/KnowledgebaseArticle50005.aspx
+* 根據官方 [IOTA 知識庫](https://kb.helloiota.com/KnowledgebaseArticle50005.aspx)
 可以透過終端機用以下方是產生種子：
 * Linux 作業系統：
 開啟終端機後輸入以下指令：
