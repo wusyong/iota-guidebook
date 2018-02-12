@@ -5,7 +5,7 @@
 
 ## IOTA 簡介
 * IOTA 並不是物聯網（IOT）的縮寫，而是運用分散式帳本技術（DLT）的一種技術應用。
-* David Sønstebø、Sergey Ivancheglo、Dominik Schiener 與 Serguei Popov 於 2015 年建立 IOTA。 
+* David Sønstebø、Sergey Ivancheglo、Dominik Schiener 與 Serguei Popov 於 2015 年建立 IOTA。
 * 在 2015 年末，IOTA 舉行首次貨幣募集（ICO）。在 2015 年 12 月 22 日總計籌得 1337 BTC（約為 50 萬美金）來作為專案開發之用。
 * 所有的代幣（token）均售出給 ICO 投資者。
 * IOTA 團隊在德國柏林註冊並建立了 IOTA 基金會，專注於開發及標準化全新的分散式帳本技術。
@@ -17,11 +17,11 @@
 ## 貨幣總量
 * 所有的 IOTA 貨幣均在一開始 ICO 時就已經全數發出，此技術沒有任何挖礦行為的參與。IOTA 總量為 ($3^{33}$-1) / 2 = 2,779,530,283,277,761 IOTAs = ~2.8 Peta IOTAs。
 * 相比之下，到了 2140 年 10 月 8 日比特幣的最大總量會是 20,999,999.9769 個比特幣（約 2 千 1 百萬 BTC）挖出。在 2017 年 11 月 11 日已經挖了 16,675,488 個比特幣，這大概是全部的 79 %。
-* 比特幣最大總量換算成其最小單位的話是 2,099,999,997,690,000 Satoshis = ~2.1 Peta Satoshis. 
+* 比特幣最大總量換算成其最小單位的話是 2,099,999,997,690,000 Satoshis = ~2.1 Peta Satoshis.
 * 也就是說到了 2140 年 IOTA 的總供給量仍然會相較於比特幣多約 32 %。
 
 ## IOTA 特點
-* 擴展性（Scalability） 
+* 擴展性（Scalability）
 * 去中心化（Decentralisation）
 * 無交易手續費（No transaction fees）
 * 抵抗量子計算（Quantum computing protection）
@@ -30,12 +30,14 @@
 * 網路會隨著交易數量的增加而越來越強健。
 * 2017 年 4 月實驗過一次壓力測試，測試結果顯示 250 個節點所建構的網路能夠達成 112 ctps（每秒確認交易數量）。
 * IOTA 能夠達成極高的交易流量，如果有越多的交易建立，交易確認的速率也會越來越快。
-![](https://i.imgur.com/WCPhoQI.png)
+
+![](images/scalability.png)
 
 ### 去中心化
 * IOTA 並沒有礦工的設計，每個建立交易的人同時也是驗證交易的人，這代表每個人在建立共識的機制中均扮演相同的角色地位。
 * 相較於比特幣網路中，算力中心化地被集中在少數的礦池中：https://blockchain.info/pools
-![](https://i.imgur.com/TacatFm.png)
+
+![](images/pool.png)
 
 ### 無交易手續費
 * 因為 IOTA 沒有交易手續費，所以非常適合微交易（micropayment）用途。
@@ -46,40 +48,50 @@
 ### 抵抗量子計算
 * 量子計算尚在非常前期的開發階段，但目前預估此科技將會在 2030 或 2050 年發展成熟。
 * 量子電腦將能夠以極快的速度破解現今大多數的資訊加密手段。
-* IOTA 使用的是 Winternitz One-Time Signature Scheme 屬於能夠抵擋量子計算的演算法，詳細請參考：https://eprint.iacr.org/2011/191.pdf 
+* IOTA 使用的是 Winternitz One-Time Signature Scheme 屬於能夠抵擋量子計算的演算法，詳細請參考：https://eprint.iacr.org/2011/191.pdf
 
 ## 區塊鏈 vs 纏結（Tangle）
 * 在區塊鏈的網路中（以比特幣為例），多筆交易會存在區塊中，然後區塊會連接在一起。
-![](https://i.imgur.com/xanLIIs.png)
+
+![](images/blockchain.png)
+
 * IOTA 是第三代公開無權限（permissionless）分散式帳本，其網路所使用的為有向無環圖（Directed Acyclic Graph），IOTA 稱呼此 DAG 為纏結（Tangle）。
 * 纏結的本身的架構**不是**區塊鏈。
 
 ## 纏結（Tangle）
-* 纏結是一個基於有向無環圖的資料結構，每個方塊代表一筆交易，**每筆交易**永遠會驗證之前兩個尚未驗證完的交易。
-![](https://i.imgur.com/sQrmwQh.png)
+* 纏結是一個基於有向無環圖的資料結構，每個方塊代表一筆交易，**每筆交易** 永遠會驗證之前兩個尚未驗證完的交易。
+
+![](images/tangle.png)
+
 * http://iota.dance/live/
-![](https://i.imgur.com/qUBeeIK.png)
+
+![](images/capture.png)
 
 ## 有向無環圖
 * 有向代表的是圖只會指向單一方向。
-![](https://i.imgur.com/lTSaQZT.png)
+
+![](images/directed.png)
 
 * 無環代表的是圖不會形成迴圈，也就是以下情形不會發生。
-![](https://i.imgur.com/ImDmY0z.png)
+
+![](images/cyclic.png)
 
 ## TIPS
 * Tips 指的是在纏結中尚未確認的交易，它們是尚未開始接受驗證不過已經驗證之前兩筆交易的交易。
-![](https://i.imgur.com/aiDkn3h.png)
+
+![](images/tip.png)
 
 ## 高度（Height）
 * 高度定義為自創世交易 (genesis) 至當前這個交易的所有路徑中最長的長度。
 * 舉例來說 G 的高度為 1 ，D 的高度為 3。
-![](https://i.imgur.com/Oyt3IWK.png)
+
+![](images/weight.png)
 
 ## 深度（Depth）
 * 深度定義為自這個交易到某個 tip 的最長路徑。
 * 舉例來說 G 對於 Tip A 的深度為 4，路徑為 F、D、B 與 A。
-![](https://i.imgur.com/Oyt3IWK.png)
+
+![](images/weight.png)
 
 ## 交易如何產生
 * 產生交易需要三個步驟：
@@ -97,7 +109,9 @@
 * 綠色：經由共識建立已經確認的交易
 紅色：尚未被完全確認的交易
 灰色：仍未開始接受確認的交易（tips）
-![](https://i.imgur.com/0OicJU1.png)
+
+![](images/confirm.png)
+
 * 所有交易的目標就是變成綠色
 每筆交易希望從灰色變為紅色，最後變為綠色
 * 綠色的交易均間接地被**所有**灰色交易驗證
@@ -123,7 +137,8 @@
 
 ## 離線交易
 * 一個纏結是可以暫時與網路分離的，我們稱此為分割（partitioning）。舉例來說，在一艘貨船中貨櫃的感應器因為遠洋運輸與主要纏結失去了連線，感應器是可以建立離線的纏結叢集。
-![](https://i.imgur.com/msjs99l.png)
+
+![](images/offline.png)
 
 ## 協調器（Coordinator）
 * 協調器（Coo）是由 IOTA 基金會建立數個完整節點分布在網路中。它產生 0 元交易作為 milestones 提供完整節點驗證參考。
@@ -144,7 +159,3 @@
 * [IOTA 團隊聲明](https://blog.iota.org/official-iota-foundation-response-to-the-digital-currency-initiative-at-the-mit-media-lab-part-1-72434583a2)此並非加密手段而是防抄機制（Copy Protection）
 * 由於防抄機制發現之後，也就沒有存在的必要，2017 年 8 月 7 日 IOTA 團隊改用 Keccak-384 簡稱做 [Kerl](https://github.com/iotaledger/iri/commit/539e413352a77b1db2042f46887e41d558f575e5) 來產生地址與簽章交易
 * Curl-P 仍有用在其他用途：https://github.com/iotaledger/kerl
-
-
-`IOTA Donation:
-ZDB9IS9WFPQQVLLQPREF9BSGNZUCWN9IDGOBXTGJEFIYEIJZYNHREMPAVYIDNNZUYHRBHICSXSVWZVSECTGBPNPRKB`
