@@ -9,7 +9,7 @@
 - 記好並妥善保存好自己的種子以及 3 碼的 checksum
 - 約略知道自己已經產生幾個地址，要更嚴謹的話可以順便連第一個與最後一個地址記起來
 
-![](https://i.imgur.com/lysHdMr.png)
+![](history.png)
 
 
 ## Snapshot 之後的處理步驟
@@ -19,7 +19,7 @@
 - 更新錢包至最新的版本： https://github.com/iotaledger/wallet/releases　（寫這篇文章時是 v2.5.6）
 - 選擇一個正常且健康的公開節點：https://iotanode.host 然後將 MWM 設定為 14，Curl Implement 選擇 WebGL。如果出現 Invalid Transaction Hash 的話那就改回 CCURL。
 
-![](https://i.imgur.com/nBkAuVy.png)
+![](wsetup.png)
 
 - 輸入正確的種子，你可以檢查 checksum 來驗證有沒有輸入正確，或是登入後檢查第一與最後一筆地址有沒有正確。
 - 點選「收款」的區塊會產生新的地址，接下來按下「附加到 Tangle」，等待出現訊息告訴你已附加上去後，接續按下「生成新位址」。重複附加與生成這樣步驟直到妳的餘額正確顯示為止，所以要是有記自己約略有幾筆交易的話，可以大概知道要重複幾次。
