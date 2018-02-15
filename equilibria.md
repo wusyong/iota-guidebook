@@ -1,16 +1,16 @@
 Tangle 上的平衡：容我嘗試解釋...
 
-Since the early days of IOTA, some questions were raised about the
-fact that the default tip-selection algorithm is not enforced — that is, there
-is no way to check if a given node really used the recommended MCMC method for selecting tips, or if it tries to tweak it in some way, in order to obtain advantages for itself. Indeed, as discussed in the whitepaper, for good functioning of the system it is necessary that the tip selection is
-sufficiently random — when a node chooses where to attach its transaction,
-this choice should be among many tips, with comparable probabilities.
-To see why this randomness is important, assume that the nodes always try to choose the best (according to some criterion) two tips. Since there are many nodes around and the transactions’ flow is big, there will be “competition” among those who chose the given two tips that were considered as “best”. Between these competitors only few will get lucky (their tips will be considered “the best”), and others will fall into oblivion.
+從  IOTA 初期以來，就有些關於預設 tip 選擇演算法並非強制性的問題受到關注，沒有辦法確認一個節點真的就是使用推薦的 MCMC 演算法，或者它也可以偷改其中的選擇來取得更大的利益。如同白皮書所討論到的，整個系統要正常地運作的確需要 tip 選擇要夠隨機，一個節點選擇附加交易的地方要在所有 tip 之上，而且相對機率要趨近相同。欲了解隨機的重要性，我們假設有節點總是按照一些衡量標準選擇最好的兩個 tips。由於還有其他非常多的節點而且交易的流量相當地大，這些選擇這兩個所謂「最好」的 tips 勢必成為「競爭」。在這些競爭者中，只有一些人有幸能選中（他們的 tips 也因此成為最佳）而其他人的則會因此被遺棄。
 
 ![](https://cdn-images-1.medium.com/max/800/1*Qs_KFwcXxXKuoERjfJ5xsw.jpeg)
 
-Here is a situation we’d like to avoid: there a thin “almost blockchain” in the middle, and lots of transactions (depicted as green) which will likely remain orphaned forever. Among the blue “recent” tips, many will probably get unlucky and share the destiny of their green friends.
-So, it is indeed of concern that the selfish nodes would choose some kind of “greedy” strategy, which would ultimately lead to the situation described above, and, therefore, the system’s failure. How can we investigate this question, to see if this will happen or not? Let us look at some theory first.
+這是我們想要避免的狀況：中間黑色為一條非常細幾乎像是區塊鏈的圖形，大部分綠色的交易很可能永遠變成孤兒，而標示為藍色的是最近的 tips，他們很可能會步上綠色交易的後塵。
+
+所以自私節點採取「貪婪」的策略的確會是個顧慮，最終可能導致上圖的情況發生，而整個系統失敗。至於我們該如何探討這個問題會不會發生，我們可以先看一下一些理論。
+
+當一個由兩個或多個玩家組成的非合作博奕遊戲中，如果某情況下無一參與者可以通過獨自行動而增加收益，則此策略組合被稱為奈許均衡點，如同著名的囚徒困境博奕般。而奈許均衡點只會發生在 Pareto-optimal 的結果上。在沒有其他可能的結果的情況下，如果沒有讓至少一名玩家變壞，任何玩家都會變得更好。
+
+在一個雙人或多人的非合作賽局中，
 
 In a non-cooperative game between two or more players, a Nash Equilibrium is achieved when — given the strategies of the other players — each of the players has nothing to gain by deviating from his own current strategy. In certain cases, such a Nash Equilibrium can occur where some or all the players are left worse off in comparison to the outcome of a cooperative game, such as the well-known Prisoner’s Dilemma game. In other cases, a Nash Equilibrium can occur in a Pareto-optimal outcome where no other possible outcome would make any player better off without making at least one player worse off. Because IOTA is a decentralized, distributed and permissionless network of nodes, it must be assumed that some proportion of the nodes in this system will be playing a non-cooperative game, choosing only to maximize their own self-interest. It is therefore important to understand where an equilibrium might occur in this particular game given the presence of selfish (or “greedy”) nodes. Would it devolve into a tragedy of the commons? Or would the Nash Equilibrium occur at a Pareto-efficient outcome? Would a Nash Equilibrium exist at all in this situation?
 

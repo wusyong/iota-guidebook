@@ -20,4 +20,5 @@
 * [線上資源彙整](resources.md)
   * [Tangle 圖解介紹](resources/tangle-illustrated.md)
   * [Tangle 圖解介紹 p2](resources/tangle-illustrated-p2.md)
+  * [Tangle 圖解介紹 p3](resources/tangle-illustrated-p3.md)
   * [交易、確認與共識](consensus.md)
