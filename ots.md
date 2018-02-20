@@ -15,11 +15,11 @@
 ## 簽章舉例
 * 今天假設 Alice 用隨機數字產生器產生了一對 256 個隨機數字，也就是總共 512 個隨機數字。每個隨機數字大小為 256 bits，這些隨機數字產生出私鑰：
 
-![](https://i.imgur.com/PE4RAqQ.png)
+![](images/private.png)
 
 * 將 512 個隨機數字用像是 SHA-256 進行 hash，這些 hash 過的隨機數字組成公鑰：
 
-![](https://i.imgur.com/b1rcH7i.png)
+![](images/public.png)
 
 * 現在 Alice 有個文件或交易數據經過 SHA-256 hash 後為 256 bits：0101...1101
 * Alice 想為他的文件產生數位簽章，所以她進行了以下步驟：
@@ -28,21 +28,21 @@
 　3.如果 bit 為 1，發布 pair 1 的第 n 個數字
 　4.掃過所有 bit 後，移除所有沒用到的數字
 
-![](https://i.imgur.com/fTkoswr.png)
+![](images/privatec.png)
 
 * 如此一來就產生了 256 個隨機數字做為數位簽章
 
-![](https://i.imgur.com/hEmEmrz.png)
+![](images/privates.png)
 
 * 可以發現數位簽章中僅包含一半的私鑰，另外 256 個數字並沒有人能知道，所以無法產生出相同的簽章出來
 * Alice 傳送她的文件給 Bob，同時附上數位簽章與公鑰
 * Bob 想要進行驗證的話，可以將文件用 SHA-256 hash 過後，和 Alice 產生簽章相同的方式來選擇公鑰的數字
 
-![](https://i.imgur.com/Zow7ob0.png)
+![](images/publicc.png)
 
 * Bob 以此從公鑰中選出 256 個數字後，再將數位簽章進行 hash 與這些數字比對，如果一模一樣即表示簽章是正確的
 
-![](https://i.imgur.com/gmQaFRW.png)
+![](images/publics.png)
 
 * Lamport signature 產生的數位簽章會揭露部分的私鑰
 * 此例中私鑰有 512 個數字，簽章揭漏了 256 個數字
