@@ -37,3 +37,5 @@
 * [IOTA 愛好者社群見面會直播](https://www.facebook.com/groups/897485720426082/permalink/912116988962955/)
 
 * [台灣 IOTA usecase](https://hackmd.io/s/SksAclcQG)
+
+* [IOTA 在去中心化身份識別技術中的應用](https://hackmd.io/s/Bk5EpFFDG)
