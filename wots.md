@@ -1,10 +1,12 @@
 # IOTA 中的簽章過程
 
 ## Curl and Kerl
+
 [https://github.com/iotaledger/kerl](https://github.com/iotaledger/kerl)
 
 ## 產生地址
- 先用種子來產生私鑰，大致上流程如下
+
+ 先用種子依照安全等級（security level）產生私鑰，安全的等級分為三種，1 為最簡單、2 為官方錢包使用的等級、3 為交易所使用的等級，接下來的步驟大致上如下：
 
 * 備妥私鑰
 * 將私鑰分成「L」等分， `L = security * 27`
@@ -17,7 +19,8 @@
 簡單來說就是 seed>private key>digest>address
 
 ## 簽章
-Signature is used to sign anything(=signed data usually bundle) on tangle that belongs to you with your private key.
+
+簽章會用私鑰來簽署 tangle 上屬於你的資訊（簽署資料像是  bundle），tryte 對照的部分會用到 [IOTA 字母系統](ternery.md)
 
 * 備妥私鑰
 * 將私鑰分成「L」等分， `L = security * 27`
@@ -32,6 +35,7 @@ Signature is used to sign anything(=signed data usually bundle) on tangle that b
 ![](https://i.imgur.com/AfD1SST.png)
 
 ## 驗證 (重新產生地址)
+
 * 備妥私鑰
 * 將私鑰分成「L」等分， `L = security * 27`
 *  將第 *i* 等分 hash M_*i* 次， M_*i* 由以下方式算出：
@@ -63,69 +67,70 @@ normailized bundle hash 會再分成　data[0], data[1], data[2] 作為*簽署�
 /**
 * Normalized the bundle.
 * return the bundle each tryte is written in integer[-13~13]
-*/
-    public int[] normalizedBundle(String bundleHash) {
+**/
+public int[] normalizedBundle(String bundleHash) {
 
-        //  normalized Bundle 81 trytes.
-        int[] normalizedBundle = new int[81];
+    //  normalized Bundle 81 trytes.
+    int[] normalizedBundle = new int[81];
 
-        //  divides bundle hash into three sections, 27 trytes each.
-        for (int i = 0; i < 3; i++) {
+    //  divides bundle hash into three sections, 27 trytes each.
+    for (int i = 0; i < 3; i++) {
 
-            long sum = 0;
+        long sum = 0;
 
-            //  check each tryte in a section.
-            //  get corresponding integer [-13~13]. And add it to sum.
-            for (int j = 0; j < 27; j++) {
+        //  check each tryte in a section.
+        //  get corresponding integer [-13~13]. And add it to sum.
+        for (int j = 0; j < 27; j++) {
 
-                //  sum += value, where
-                //  value = integer value of i*27+j-th tryte
-                sum +=
-                    (normalizedBundle[i * 27 + j] =
+            //  sum += value, where
+            //  value = integer value of i*27+j-th tryte
+            sum +=
+                (normalizedBundle[i * 27 + j] =
 
-                        //  Convert tryte[9ABC...Z] into [-13~13]
-                        Converter.value(Converter.tritsString("" + bundleHash.charAt(i * 27 + j)))
-                    );
-            }
+                    //  Convert tryte[9ABC...Z] into [-13~13]
+                    Converter.value(Converter.tritsString("" + bundleHash.charAt(i * 27 + j)))
+                );
+        }
 
-            // if sum of the section >= 0
-            if (sum >= 0) {
+        // if sum of the section >= 0
+        if (sum >= 0) {
 
-                //  until sum = 0
-                while (sum-- > 0) {
+            //  until sum = 0
+            while (sum-- > 0) {
 
-                    //  decrement tryte
-                    for (int j = 0; j < 27; j++) {
-                        if (normalizedBundle[i * 27 + j] > -13) {
-                            normalizedBundle[i * 27 + j]--;
-                            break;
-                        }
+                //  decrement tryte
+                for (int j = 0; j < 27; j++) {
+                    if (normalizedBundle[i * 27 + j] > -13) {
+                        normalizedBundle[i * 27 + j]--;
+                        break;
                     }
                 }
+            }
 
-            //  if sum of the section < 0
-            } else {
+        //  if sum of the section < 0
+        } else {
 
-                //  until sum = 0
-                while (sum++ < 0) {
+            //  until sum = 0
+            while (sum++ < 0) {
 
-                    //    increment tryte
-                    for (int j = 0; j < 27; j++) {
+                //    increment tryte
+                for (int j = 0; j < 27; j++) {
 
-                        if (normalizedBundle[i * 27 + j] < 13) {
-                            normalizedBundle[i * 27 + j]++;
-                            break;
-                        }
+                    if (normalizedBundle[i * 27 + j] < 13) {
+                        normalizedBundle[i * 27 + j]++;
+                        break;
                     }
                 }
             }
         }
-
-        return normalizedBundle;
     }
+
+    return normalizedBundle;
+}
 ```
 
 ## 地址重複使用的風險
+回想上面計算 hash 次數的方式：
 
 > **如何算出 N_*i***
 >
@@ -134,6 +139,10 @@ normailized bundle hash 會再分成　data[0], data[1], data[2] 作為*簽署�
 > 公式： *N_i = 13 - d*
 
 hash 的次數與簽署資料的第 i 個 tryte 有關，如果簽署資料包含非常多 'M' 的話，就意味著幾乎不會做任何 hash，這會導致私鑰完全被曝光的風險。
+
+## 抵抗量子計算
+此簽章機制源自於 Winternitz one-time signature，WOTS 可以[抵擋量子計算的攻擊](https://eprint.iacr.org/2011/191.pdf)。
+
 
 
 ## Reference
