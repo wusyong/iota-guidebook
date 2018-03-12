@@ -1,9 +1,9 @@
 # Summary
-## Section 1
-### Section 2
+
+### Tangle 技術指南
 * [IOTA 學習筆記](README.md)
-* [1. 什麼是 IOTA？](iota.md)
-* [2. 種子安全](seed/seed.md)
+* [什麼是 IOTA？](iota.md)
+* [種子安全](seed/seed.md)
   * [使用作業系統終端機產生](seed/terminal.md)
   * [使用 Web App 產生](seed/web-app.md)
   * [使用 KeePass 產生並保存](seed/keepass.md)
@@ -11,6 +11,7 @@
 * [快照](snapshot/snapshot.md)
   * [快照準備事項](snapshot/snapshot-pre.md)
 * [一次性簽章](ots.md)
+* [IOTA 中的簽章過程](wots.md)
 * [工作量證明(WIP)](pow.md)
 * [完整節點](full-node.md)
   * [Google Cloud Platform](full-node/google-cloud-platform.md)
@@ -20,7 +21,7 @@
 * [其他待整](uncategorized.md)
 
 ----
-
+### 其他資源
 * [線上資源彙整](resources.md)
   * [交易、確認與共識](resources/consensus.md)
 * [Tangle 圖解介紹](illustrated/tangle-illustrated.md)
