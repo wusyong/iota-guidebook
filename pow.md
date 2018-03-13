@@ -1,4 +1,5 @@
-# PoW(WIP)
+# 工作證明
+
 ## 產生交易
 欲發起交易基本上會進行三個步驟
 1. 組成 Bundle 然後用地址的私鑰進行簽章：
@@ -47,8 +48,8 @@ IOTA 團隊自己建立了一個 hash 函數稱作 Curl，此函數在 IOTA 中�
 
 根據 [The Anatomy of a Transaction](https://docs.iota.org/introduction/iota-token/anatomy-of-a-transaction) 所述一筆 encoded 的交易會是一條 2673 trytes 字串（string），最後面會保留給 nonce。當設定好 MWM 輸入交易進行 PoW 後會取得 nonce，該 nonce 就會填入交易中。
 
-![](https://i.imgur.com/lh8ZGOG.png)
+![](images/txnonce.png)
 
 接下來我們會按照 [curl.lib.js](https://github.com/iotaledger/curl.lib.js) 來舉例說明如何驗證的，curl hash function 是基於 sponge function，主要分為 absorb 和 squeeze 兩部分。首先將 transaction trytes 轉成 trits 後用 Curl-P-81 進行 hash 處理，之後再擠出所需的值。最後檢測此數值結尾連續為 0 的數量，至少要符合 MWM 最低的量級，我們才會說此 nonce 為有效的，而相對應的交易才能夠合理存在 tangle 中受到確認。
 
-![](https://i.imgur.com/lDPKCnL.png)
+![](images/curlp81.png)

@@ -1,6 +1,6 @@
 # Summary
 
-### Tangle 
+### Tangle
 * [IOTA 學習筆記](README.md)
 * [什麼是 IOTA？](iota.md)
 * [種子安全](seed/seed.md)
@@ -12,7 +12,7 @@
   * [快照準備事項](snapshot/snapshot-pre.md)
 * [一次性簽章](ots.md)
 * [IOTA 中的簽章過程](wots.md)
-* [工作量證明(WIP)](pow.md)
+* [工作證明](pow.md)
 * [完整節點](full-node.md)
   * [Google Cloud Platform](full-node/google-cloud-platform.md)
 * [權重](weight.md)
