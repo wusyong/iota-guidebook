@@ -13,7 +13,7 @@
 * 將所有等分都 Hash 過，此過程稱為 `digest`
 * Hash `digest` 兩次，此過程稱為 `address`
 
-![](https://i.imgur.com/UJAbBTj.png)
+![](images/seedtoaddr.png)
 
 
 簡單來說就是 seed>private key>digest>address
@@ -32,7 +32,7 @@
 > 公式： *N_i = 13 - d*
 * 這些 hash 過的部分就統稱為**簽章**
 
-![](https://i.imgur.com/AfD1SST.png)
+![](images/sig.png)
 
 ## 驗證 (重新產生地址)
 
@@ -48,14 +48,14 @@
 * 將 `digest` Hash 兩次
 * 檢查上一步產生的地址是否與簽署資料（通常指 Bundle）上的地址相同
 
-![](https://i.imgur.com/hQLtFOq.png)
+![](images/sigval.png)
 
 ## 簽署資料
 簽章用來簽署輸入的地址，然後會存在簽署過輸入的 bundle 當中。簽署資料的長度為 security * 2187 tryte，存在 `signatureFragment` 中。`signatureFragment` 的大小為 2187 tryte，所以安全性越高，bundle 中所需的交易數量也越多。
 
 上述簽章數據指的是包含簽章的 bundle hash (81 tryte)，更嚴謹的方式來說應稱作 `normalized bundle hash`，它會稍微增加 bundle hash 讓私鑰的曝光度保持在 50%。
 
-![](https://i.imgur.com/GGu2g0g.png)
+![](images/nbundlehash.png)
 
 
 normailized bundle hash 會再分成　data[0], data[1], data[2] 作為*簽署資料*，其中 27 trytes 用來算出對應的 27 個等分個別需 hash 幾次，以上的 data[i] 就是 27 trytes 的簽署資料。如果 `security = 1`，那就只有 data[0]；如果 `security = 2`，那就會需要 data[0] 和 data[1]，也就是總共有 54 trytes 做簽署。所以在產生 bundle 時，交易數量的多寡也和安全等級有關。等級越高所需要的 data[i] 也就越多。
