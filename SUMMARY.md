@@ -1,6 +1,6 @@
 # Summary
 
-### Tangle 技術指南
+### Tangle 
 * [IOTA 學習筆記](README.md)
 * [什麼是 IOTA？](iota.md)
 * [種子安全](seed/seed.md)

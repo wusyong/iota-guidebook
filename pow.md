@@ -7,7 +7,7 @@
 - 這邊所說的交易是一個包含一個地址、簽章、金額與 tag 的物件。
 2. Tip 選擇：
 - 在 tip 選擇的過程中，你會用隨機漫步在 tangle 中隨機選取兩筆交易來進行驗證。你的交易會檢查該交易是否能合理存在於帳本中，如果合理的話就會加進 bundle 裡，分別為 trunkTransaction 與 branchTransaction。
-- IRI API 的 [getTransactionsToApprove](https://iota.readme.io/reference#gettransactionstoapprove) 會取得 tips 的 trunk 和 branch hash。
+- 目前 IRI API 的 [getTransactionsToApprove](https://iota.readme.io/reference#gettransactionstoapprove) 會取得 tips 的 trunk 和 branch hash。
 3. Proof of Work(PoW)：
 - 當 Bundle 組成好、簽章完成且 tip 選擇好後，bundle 裡的每筆交易都會需要進行 PoW 才行。PoW 的結果會產生出 nonce，每筆交易必須加入 nonce 才能被 tangle 網路所接受。
 - IOTA 的 PoW 類似於 Hashcash，其目的一樣是為了防堵濫發，在 IOTA 中還被用來防禦女巫攻擊。
@@ -35,19 +35,20 @@ IOTA 團隊自己建立了一個 hash 函數稱作 Curl，此函數在 IOTA 中�
 
 所以理論上在做 PoW 時 GPU 會比 CPU 還來的快，而 IOTA 錢包預設也是使用 Webgl 2 Curl Implementation 來加快 PoW 運作的速度。不過有些使用者會遇到「Invalid Transaction Hash」的問題，這樣的話可能就選擇 CCurl Implementation 就好。
 
-![](https://i.imgur.com/psOcuHT.png)
+
 
 ## Minimum Weight Magnitude
 在開始說明 PoW 之前，我們還得在說明一個術語 Minimum Weight Magnitude（也就是上圖中文設定顯示的最低量級），MWM 是工作證明（PoW）的難度設定，實際上它是指一串連續為零的數量。
 
 根據 IRI release v1.4.2.1，mainnet 的 MWM 為 14；而根據 IRI release testnet-v1.4.1.3，testnet 的 MWM 為 9。增加 MWM 不會有甚麼問題，不過要注意會增長 PoW 的時間。MWM 的變更可在 IRI 以下路徑找到：[ iri/src/main/java/com/iota/iri/conf/Configuration.java](https://github.com/iotaledger/iri/blob/dev/src/main/java/com/iota/iri/conf/Configuration.java)
 
-## 工作量證明（PoW）
+## 工作證明（PoW）
 如上文提及 PoW 在 IOTA 中用來防止 spam 以及 sybil attack，bundle 中的每個交易都需要進行 PoW 取得 nonce 才能夠發送。無論是發送 0 元或有價值的交易都不會需要手續費，真的要說的話你會付的僅是進行 PoW 所需要的電費。
 
-根據 [The Anatomy of a Transaction](https://domschiener.gitbooks.io/iota-guide/content/chapter1/transactions-and-bundles.html) 所述一筆 encoded 的交易會是一條 2673 trytes 字串（string），其中會保留 81 trytes 給 nonce。當設定好 MWM 輸入交易進行 PoW 後會取得 nonce，該 nonce 就會填入交易預留的 81 trytes 中。
+根據 [The Anatomy of a Transaction](https://docs.iota.org/introduction/iota-token/anatomy-of-a-transaction) 所述一筆 encoded 的交易會是一條 2673 trytes 字串（string），最後面會保留給 nonce。當設定好 MWM 輸入交易進行 PoW 後會取得 nonce，該 nonce 就會填入交易中。
 
-![](https://i.imgur.com/1HUNJYv.png)
-![](https://i.imgur.com/aDzBZ6d.png)
+![](https://i.imgur.com/lh8ZGOG.png)
 
-接下來我們會按照 [curl.lib.js](https://github.com/iotaledger/curl.lib.js) 的函數與物件來舉例說明如何驗證的，
+接下來我們會按照 [curl.lib.js](https://github.com/iotaledger/curl.lib.js) 來舉例說明如何驗證的，curl hash function 是基於 sponge function，主要分為 absorb 和 squeeze 兩部分。首先將 transaction trytes 轉成 trits 後用 Curl-P-81 進行 hash 處理，之後再擠出所需的值。最後檢測此數值結尾連續為 0 的數量，至少要符合 MWM 最低的量級，我們才會說此 nonce 為有效的，而相對應的交易才能夠合理存在 tangle 中受到確認。
+
+![](https://i.imgur.com/lDPKCnL.png)
