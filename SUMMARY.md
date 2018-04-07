@@ -12,6 +12,7 @@
   * [快照準備事項](snapshot/snapshot-pre.md)
 * [一次性簽章](ots.md)
 * [IOTA 中的簽章過程](wots.md)
+* [海綿函數](sponge.md)
 * [工作證明](pow.md)
 * [完整節點](full-node.md)
   * [Google Cloud Platform](full-node/google-cloud-platform.md)
