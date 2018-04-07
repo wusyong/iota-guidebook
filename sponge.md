@@ -5,7 +5,7 @@
 
 ## IOTA 中應用的地方
 
-海綿函數可以在用來架構或者實做密碼學的原始函數，像是加密雜湊函數等等。在 IOTA 中用此方式來[產生地址](https://github.com/iotaledger/iota.lib.js/blob/master/lib/api/api.js#L758)以及[檢驗碼](https://github.com/iotaledger/iota.lib.js/blob/master/lib/utils/utils.js#L62)（checksum）等等。在上述連結中再深入 [signing.js](https://github.com/iotaledger/iota.lib.js/blob/master/lib/crypto/signing/signing.js) 尋找的話可以找到 key 和 digest 等函數，其中就可以看到不少 absorb 和 squeeze 的步驟。
+海綿函數可以在用來架構或者實做密碼學的原始函數，像是加密雜湊函數等等。本文以 IOTA 中的 javascript library 為例，IOTA 用此方式來[產生地址](https://github.com/iotaledger/iota.lib.js/blob/master/lib/api/api.js#L758)以及[檢驗碼](https://github.com/iotaledger/iota.lib.js/blob/master/lib/utils/utils.js#L62)（checksum）等等。在上述連結中再深入 [signing.js](https://github.com/iotaledger/iota.lib.js/blob/master/lib/crypto/signing/signing.js) 尋找的話可以找到 key 和 digest 等函數，其中就可以看到不少 absorb 和 squeeze 的步驟。
 
 而這些吸收擠出的步驟的 wrapper 來自 [Kerl](https://github.com/iotaledger/iota.lib.js/blob/master/lib/crypto/kerl/kerl.js#L8)，它使用的 module 是 [CryptoJS](https://code.google.com/archive/p/crypto-js/)，不過其中使用的雜湊函數並不是原先的 SHA-3-384 而是 Keccak-384，因為 Keccak 雜湊函數就是以海綿函數的方式建立的。
 
