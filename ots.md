@@ -49,4 +49,4 @@
 * 再次使用此私鑰的話就會再增加一半的風險
 * 攻擊者暴力破解的機率會從 $1/2^{256}$ 上升到 $1/2^{128}$
 * 同樣的私鑰在使用第三次的話就會是 $1/2^{64}$，第四次會是 $1/2^{32}$
-* 再次聲明 IOTA 的簽章是用 Winternitz One Time Signature(WOTS)，和此例的 Lamport signature 是不一樣的，這邊的舉例是為了方便理解重複使用地址所帶來的風險
+* 再次聲明 IOTA 的簽章是用 Winternitz One Time Signature(WOTS)，和此例的 Lamport signature 是不一樣的，這邊的舉例是為了方便理解重複使用地址所帶來的風險，之後會再詳細分析 WOTS 實際在 IOTA 中的簽章過程。

@@ -17,7 +17,7 @@
 * [產生交易](transaction.md)
   * [一次性簽章](ots.md)
   * [簽章過程](wots.md)
-  * [海綿函數](sponge.md)
+    * [海綿函數](sponge.md)
   * [工作證明](pow.md)
 * [完整節點](full-node.md)
   * [Google Cloud Platform](full-node/google-cloud-platform.md)
