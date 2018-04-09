@@ -17,6 +17,7 @@
 * [產生交易](transaction.md)
   * [一次性簽章](ots.md)
   * [簽章過程](wots.md)
+    * [私鑰與地址](transaction/wots/keyaddr/keyaddr.md)
     * [海綿函數](sponge.md)
   * [工作證明](pow.md)
 * [完整節點](full-node.md)
@@ -33,4 +34,3 @@
   * [累積權重與加權隨機漫步](illustrated/tangle-illustrated-p3.md)
   * [確認、餘額與雙花](illustrated/tangle-illustrated-p4.md)
   * [共識、確認可信度與協調器](illustrated/tangle-illustrated-p5.md)
-
