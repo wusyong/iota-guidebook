@@ -6,14 +6,14 @@
 
 ## 產生地址
 
- 先用種子依照安全等級（security level）產生私鑰，安全的等級分為三種，1 為最簡單、2 為官方錢包使用的等級、3 為交易所使用的等級，接下來的步驟大致上如下：
+ 先用種子依照安全等級（security level）產生私鑰，安全的等級分為三種，1 為最簡單、2 為官方錢包使用的等級、3 為交易所使用的等級。Hash 目前使用的是 Kerl(Keccak-384)，進行的步驟大致上如下：
 
 * 備妥私鑰
 * 將私鑰分成「L」等分， `L = security * 27`
 * 將所有等分都 Hash 過，此過程稱為 `digest`
 * Hash `digest` 兩次，此過程稱為 `address`
 
-![](images/seedtoaddr.png)
+![seedtoaddr](/assets/seedtoaddr.png)
 
 
 簡單來說就是 seed>private key>digest>address
