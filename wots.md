@@ -13,7 +13,7 @@
 * 將所有等分都 Hash 過，此過程稱為 `digest`
 * Hash `digest` 兩次，此過程稱為 `address`
 
-![](images/seedtoaddr.png)
+![seedtoaddr](/assets/seedtoaddr.png)
 
 
 簡單來說就是 seed>private key>digest>address
