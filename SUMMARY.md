@@ -19,7 +19,7 @@
   * [簽章過程](wots.md)
     * [海綿函數](sponge.md)
     * [私鑰與地址](transaction/wots/keyaddr/keyaddr.md)
-    * [bundleHash](transaction/wots/keyaddr/bundlehash.md)
+    * [bundleHash](transaction/wots/bundlehash/bundlehash.md)
   * [工作證明](pow.md)
 * [完整節點](full-node.md)
   * [Google Cloud Platform](full-node/google-cloud-platform.md)
