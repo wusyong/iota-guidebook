@@ -14,7 +14,7 @@
 
 ## Digest
 
-Digest 是私鑰轉換到地址的過程，如同上一篇文章所述，私鑰會先再 Hash 過 26 次才繼續產生 digest，我們將此雜湊過的私鑰稱為 keyFragment。而安全等級會決定 KeyFragment 的數量，姐就是說等級 3 的會就會將私鑰切為三個 keyFragment。每個 keyFragment 再進行 Hash 一次就會產生 digest，最後再將 digest 進行 Hash 一次就會產生地址。
+Digest 是私鑰轉換到地址的過程，如同上一篇文章所述，私鑰會先再 Hash 過 26 次才繼續產生 digest，我們將此雜湊過的私鑰稱為 keyFragment。而安全等級會決定 KeyFragment 的數量，也就是說等級 3 的會就會將私鑰切為三個 keyFragment。每個 keyFragment 再進行 Hash 一次就會產生 digest，最後再將 digest 進行 Hash 一次就會產生地址。
 
 ![](digest.png)
 
