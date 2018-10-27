@@ -6,9 +6,3 @@
 * [種子安全](seed.md)
 * [交易所轉帳](exchange.md)
 * [快照](snapshot.md)
-
-歡迎提供意見或是發問，要是您喜歡的話歡迎打賞 IOTA 或 ETH：
-
-`ETH Donation: 0xdda02772C1C5b48B72aDe8Be67d203CF4AEa8f7F`  
-`IOTA Donation: ZDB9IS9WFPQQVLLQPREF9BSGNZUCWN9IDGOBXTGJEFIYEIJZYNHREMPAVYIDNNZUYHRBHICSXSVWZVSECTGBPNPRKB`
-
