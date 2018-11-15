@@ -13,7 +13,6 @@
   * [使用 Web App 產生](seed/web-app.md)
   * [使用 KeePass 產生並保存](seed/keepass.md)
 * [快照](snapshot/snapshot.md)
-  * [事前準備事項](snapshot/snapshot-pre.md)
 * [產生交易](transaction.md)
   * [一次性簽章](ots.md)
   * [簽章過程](wots.md)
@@ -23,8 +22,6 @@
   * [工作證明](pow.md)
 * [完整節點](full-node.md)
   * [Google Cloud Platform](full-node/google-cloud-platform.md)
-* [其他待整](uncategorized.md)
-  * [交易所轉帳](exchange.md)
 
 ## 其他資源
 
